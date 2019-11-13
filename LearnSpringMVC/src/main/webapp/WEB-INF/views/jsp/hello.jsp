@@ -11,6 +11,6 @@
     <title>HelloSpringMVC</title>
 </head>
 <body>
-
+    <h1>Test config servlet.xml</h1>
 </body>
 </html>

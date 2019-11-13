@@ -5,8 +5,9 @@
     http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
 
-  <display-name>HelloSpringMVC</display-name>
-
+  <display-name>LearnSpringMVC</display-name>
+<!--  xóa index.jsp tự động tạo ở thư mục web-app nếu trùng tên index.jsp thì mặc định chạy vào thằng web-app-->
+<!--WEB đọc thư mục bắt đầu trong web-app-->
 <!--  khai bao servlet mặc định cấu hình sẽ ở trong WEB-INF/ten-servlet-servelt.xml-->
   <servlet>
     <servlet-name>spring-mvc</servlet-name>
@@ -18,6 +19,17 @@
   <servlet-mapping>
     <servlet-name>spring-mvc</servlet-name>
     <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>img</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>img</servlet-name>
+    <url-pattern>/img</url-pattern>
   </servlet-mapping>
 
 </web-app>

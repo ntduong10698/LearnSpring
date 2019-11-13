@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+    <!--    quyet component trong thư mục như base-package-->
+    <context:component-scan base-package="com.bksoftwarevn.duongnt"/>
+
+<!--cấu hình view cho servlet -->
+<!--    bean ??, internalResourceViewResolever đùng để làm gì, cú phát của bean là gì-->
+<!--    Application context trong sping la gi de y luc doi ten o server-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--tiền tố được nối trước trả về của servlet-->
+    <property name="prefix">
+        <value>/WEB-INF/views/jsp/</value>
+    </property>
+<!--hậu tố được nối sau trả về của servlet-->
+    <property name="suffix">
+        <value>.jsp</value>
+    </property>
+    </bean>
+</beans>
+
+<!--        InternalResourceViewResolver: thực hiện mapping các file view tương ứng, ở trong ví dụ này nó sẽ map các file trong folder WEB-INF/views/jsp có đuôi là .jsp-->

@@ -7,7 +7,9 @@
     <context:component-scan base-package="com.bksoftwarevn.duongnt"/>
 
 <!--cấu hình view cho servlet -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceView">
+<!--    bean ??, internalResourceViewResolever đùng để làm gì, cú phát của bean là gì-->
+<!--    Application context trong sping la gi de y luc doi ten o server-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <!--tiền tố được nối trước trả về của servlet-->
     <property name="prefix">
         <value>/WEB-INF/views/jsp/</value>
